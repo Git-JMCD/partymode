@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PartyMode for Blender</title>
+<meta name="description" content="Bring your AI agents into Blender, and let them build together.">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --text: #1d1c1a; --muted: #6b6860; --line: #e4e1da;
+    --accent: #d97757; --accent-text: #ffffff; --tile: #efede8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161615; --card: #1f1f1d; --text: #efede8; --muted: #a09d95; --line: #33322f;
+            --accent: #e0896b; --accent-text: #1a1110; --tile: #2a2927; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 16px 64px; }
+  .logo { width: 56px; height: 56px; background: var(--accent);
+          -webkit-mask: url(icon.png) center / contain no-repeat; mask: url(icon.png) center / contain no-repeat; }
+  h1 { font-size: 40px; line-height: 1.1; margin: 20px 0 8px; letter-spacing: -0.02em; }
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 32px; }
+  .install { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .drag { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 12px;
+          background: var(--accent); color: var(--accent-text); text-decoration: none; font-weight: 650;
+          font-size: 18px; cursor: grab; user-select: none; }
+  .drag:active { cursor: grabbing; }
+  .drag .grip { font-size: 22px; line-height: 1; opacity: 0.85; }
+  .drag .meta { margin-left: auto; font-weight: 500; font-size: 14px; opacity: 0.85; }
+  .how { margin: 18px 0 0; padding-left: 20px; color: var(--muted); }
+  .how li { margin: 4px 0; }
+  .how b { color: var(--text); font-weight: 600; }
+  h2 { font-size: 18px; margin: 40px 0 8px; }
+  p, li { color: var(--muted); }
+  a { color: var(--accent); }
+  .shot { display: block; width: 100%; border-radius: 12px; border: 1px solid var(--line); margin-top: 32px; }
+  footer { margin-top: 40px; font-size: 14px; color: var(--muted); }
+  @media (max-width: 520px) { h1 { font-size: 32px; } .drag .meta { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo" role="img" aria-label="PartyMode logo"></div>
+  <h1>PartyMode</h1>
+  <p class="lede">Bring your AI agents into Blender, and let them build together.</p>
+
+  <section class="install" aria-labelledby="install">
+    <a class="drag" id="install" href="./PartyMode-0.38.13.zip?repository=./index.json&amp;blender_version_min=5.2.0"
+       title="Drag this onto your Blender window">
+      <span class="grip" aria-hidden="true">⠿</span>
+      <span>Drag me into Blender</span>
+      <span class="meta">PartyMode 0.38.13 · 1.0 MB</span>
+    </a>
+    <ol class="how">
+      <li><b>Drag the button above onto your Blender window</b> (Blender 5.2 or newer).</li>
+      <li>Blender asks to <b>add the PartyMode repository</b> the first time: click Add Repository, then drag again.</li>
+      <li>Click <b>Install</b>, then <b>PartyMode</b> in the 3D View header, and say what to make.</li>
+    </ol>
+    <p>Or click it to download the zip, and drop that file onto Blender instead.</p>
+  </section>
+
+  <img class="shot" src="hero.png" alt="The PartyMode chat beside Blender's viewport">
+
+  <h2>What you need</h2>
+  <p>One AI agent installed and signed in on your computer:
+    <a href="https://claude.com/claude-code">Claude Code</a> (with a Claude plan),
+    <a href="https://github.com/openai/codex">Codex</a> (with a ChatGPT plan), or
+    <a href="https://opencode.ai">OpenCode</a> (hosted models, or local ones that keep everything on your machine).</p>
+
+  <h2>Updates</h2>
+  <p>Installed this way, Blender checks for new versions itself, under Edit › Preferences › Get Extensions.
+    PartyMode also offers them in its own preferences.</p>
+
+  <footer>PartyMode 0.38.13 · <a href="https://github.com/johnmcclurgdesign/partymode-releases/releases">All releases</a></footer>
+</main>
+</body>
+</html>
