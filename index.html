@@ -19,8 +19,7 @@
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 56px 16px 64px; }
-  .logo { width: 56px; height: 56px; background: var(--accent);
-          -webkit-mask: url(icon.png) center / contain no-repeat; mask: url(icon.png) center / contain no-repeat; }
+  .logo { display: block; width: 64px; height: 64px; object-fit: contain; }
   h1 { font-size: 40px; line-height: 1.1; margin: 20px 0 8px; letter-spacing: -0.02em; }
   .lede { font-size: 19px; color: var(--muted); margin: 0 0 32px; }
   .install { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
@@ -43,7 +42,7 @@
 </head>
 <body>
 <main>
-  <div class="logo" role="img" aria-label="PartyMode logo"></div>
+  <img class="logo" src="icon.png" alt="PartyMode logo">
   <h1>PartyMode</h1>
   <p class="lede">Bring your AI agents into Blender, and let them build together.</p>
 
