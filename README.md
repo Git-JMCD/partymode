@@ -1,13 +1,13 @@
 # PartyMode
 
-Bring your AI agents into Blender, and let them build together. A Blender 5.3 add-on.
+Bring your AI agents into Blender, and let them build together. A Blender add-on for 5.2 or newer.
 
 This repository only holds the release zips. It's private: you're here because you were invited.
 
 ## Install
 
 1. Open the [latest release](../../releases/latest) and download `agent_bridge-<version>.zip`. Don't unzip it.
-2. Drag the zip onto your Blender 5.3 window and click **Install**.
+2. Drag the zip onto your Blender window (5.2 or newer) and click **Install**.
    (Or: Edit › Preferences › Get Extensions › ⌄ › Install from Disk, and pick the zip.)
 3. Click **PartyMode** in the 3D View header, and say what to make.
 
