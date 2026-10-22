@@ -2,24 +2,21 @@
 
 Bring your AI agents into Blender, and let them build together. A Blender add-on for 5.2 or newer.
 
-This repository only holds the release zips. It's private: you're here because you were invited.
+This repository holds PartyMode's release zips and its install page, nothing else.
 
 ## Install
 
-1. Open the [latest release](../../releases/latest) and download `agent_bridge-<version>.zip`. Don't unzip it.
-2. Drag the zip onto your Blender window (5.2 or newer) and click **Install**.
-   (Or: Edit › Preferences › Get Extensions › ⌄ › Install from Disk, and pick the zip.)
-3. Click **PartyMode** in the 3D View header, and say what to make.
+**Easiest:** open the [install page](https://johnmcclurgdesign.github.io/partymode-releases/) and drag
+its button onto your Blender window. The first time, Blender asks to add the PartyMode repository:
+click Add Repository, then drag again, and click Install. Blender then checks for updates itself.
+
+**Or by hand:** download `PartyMode-<version>.zip` from the [latest release](../../releases/latest)
+(don't unzip it), drag the file onto Blender and click Install. Or use Edit › Preferences ›
+Get Extensions › ⌄ › Install from Disk.
+
+Then click **PartyMode** in the 3D View header, and say what to make.
 
 The chat needs one AI agent installed and signed in on your computer:
 [Claude Code](https://claude.com/claude-code) (with a Claude plan),
 [Codex](https://github.com/openai/codex) (with a ChatGPT plan), or
 [OpenCode](https://opencode.ai) (hosted models, or local ones that keep everything on your machine).
-
-## Updates
-
-PartyMode checks this repository once a day and offers new versions in its preferences
-(Edit › Preferences › Add-ons › PartyMode). Because the repository is private, that check needs
-the [GitHub CLI](https://cli.github.com) installed and signed in (`gh auth login`). Without it,
-come back to the [releases page](../../releases/latest) for new versions, and drag the new zip in
-the same way.
