@@ -8,7 +8,7 @@
       "id": "agent_bridge",
       "name": "PartyMode",
       "tagline": "AI agents that build in Blender with you, and check their work",
-      "version": "0.38.15",
+      "version": "0.40.0",
       "type": "add-on",
       "maintainer": "johnmcclurgdesign",
       "license": [
@@ -23,9 +23,9 @@
       "tags": [
         "Development"
       ],
-      "archive_url": "./PartyMode-0.38.15.zip",
-      "archive_size": 1153074,
-      "archive_hash": "sha256:46a062d0a93a96d263751ab50e1e4de3f5003b8f797e515bf8e868de4828cadd"
+      "archive_url": "./PartyMode-0.40.0.zip",
+      "archive_size": 2640618,
+      "archive_hash": "sha256:93d0924b2218bb034c639eae9088e96e6795376606ab1622775f093243ca5d06"
     }
   ]
 }
