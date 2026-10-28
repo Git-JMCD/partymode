@@ -49,15 +49,18 @@ chat.
 **One shared memory.** Every undo step is named for the agent that made it. The references,
 renders and notes on the Sandbox board are there for all of them.
 
-**You run it from one place.** Each agent's work lands in the same chat, under its own name.
-Approve, redirect or stop the whole team without leaving Blender.
+**You run it from one place.** Each agent's work lands in the same chat, under its own name, and a
+helper's work sits in its own coloured panel. Talk to the lead while the helpers keep building, or
+approve, redirect or stop the whole team, without leaving Blender.
 
 **Direct from anywhere.** Not one for prompting? Talk to a terminal agent like Claude Code instead.
 It joins the same room, pins your screenshots and scribbles to the Sandbox, and turns "the nose
 looks pinched" into a precise note for whichever agent owns the nose.
 
-**Use every plan you pay for.** Claude on your Claude plan, Codex on your ChatGPT plan, and a free
-local model for the simple parts, all on one scene.
+**Use every plan you pay for.** Claude on your Claude plan, Codex on your ChatGPT plan, Grok,
+Copilot or Gemini on theirs, and a free local model for the simple parts, all on one scene. The
+agent menu shows how much of each plan's limits you've used, and the lead keeps a helper that's
+nearly out to small tasks.
 
 <br clear="right">
 
@@ -78,7 +81,7 @@ The agents measure in metres, and mark what's wrong right in your viewport.
 side by side, and keep it only if you like it.
 
 <p align="center">
-  <img src="media/menu.png" width="49%" alt="The agent menu: pick Claude, Codex or OpenCode, the model and how hard it thinks">
+  <img src="media/menu.png" width="49%" alt="The agent menu: pick the agent, see how much of its plan is used, then the model and how hard it thinks">
   <img src="media/checks.png" width="49%" alt="A failed check marked in the viewport: the cube sunk into the floor">
 </p>
 <p align="center">
@@ -115,7 +118,9 @@ workflow names in the add-on's preferences.
 The chat needs one agent, signed in on your computer:
 [Claude Code](https://claude.com/claude-code) (your Claude plan),
 [Codex](https://github.com/openai/codex) (your ChatGPT plan), or
-[OpenCode](https://opencode.ai) (hosted models, or local ones that keep everything on your machine).
+[OpenCode](https://opencode.ai) (hosted models, Meta's among them, or local ones that keep everything
+on your machine). Or switch on Grok Build, GitHub Copilot, Gemini CLI or any other agent that speaks
+the Agent Client Protocol, in the add-on's Agents settings.
 
 Updates arrive in the add-on itself: one click in its preferences.
 
@@ -123,10 +128,13 @@ Updates arrive in the add-on itself: one click in its preferences.
 
 **Chat**
 - **Chat beside your viewport,** or as a bar floating in it.
-- **Claude, Codex or OpenCode,** each with its own model and how hard it thinks.
+- **Claude, Codex or OpenCode,** each with its own model and how hard it thinks. Grok, Copilot,
+  Gemini or your own ACP agent when you switch them on.
+- **Plan usage** in the agent menu: how much of Claude's and Codex's 5-hour and weekly limits is
+  used, and when they reset.
 - **@mention objects** to point at them, or **Mark** a box over any part of the screen.
 - **Suggestions** for what's selected, and a guess at your next message (Tab takes it).
-- **Three looks:** Halo, Signal and Classic.
+- **Three looks:** Halo, Signal and Classic. A new chat greets you with the agent's own logo, animated.
 - **Chats are saved;** pick one up later, even with a different agent.
 
 **Safety**
@@ -165,6 +173,10 @@ Updates arrive in the add-on itself: one click in its preferences.
   agent menu.
 - **The lead plans, hands out tasks and reviews them,** and hears straight away if a helper gets
   stuck.
+- **Talk to the lead while helpers work:** your message goes straight to it, or waits for its reply,
+  and the helpers keep going. A helper that's gone quiet shows how long for.
+- **Each helper's work sits in its own coloured panel,** so a helper's report never reads as the
+  lead's.
 - **A helper keeps its own conversation** from task to task, so a fix doesn't start from scratch.
 - **Claims** keep agents off each other's objects, even ones not built yet.
 - **Notes** between agents, and every edit says who made it.
