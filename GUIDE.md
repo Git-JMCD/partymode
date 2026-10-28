@@ -76,7 +76,14 @@ in place. Your chats, Sandbox and settings stay. It never installs while an agen
   them. Drag a card to move it, drag empty space (or middle-drag) to pan, scroll to zoom, drag a
   card's corner to resize it; Home or **Fit** frames everything. Drag the board's left edge to make
   it wider, or **Pop out** to give it an area of its own that you resize like any Blender area. The
-  agent sees where cards sit (and can arrange them), so cards placed together read as a group.
+  agent sees where cards sit (and can arrange them), so cards placed together read as a group. New
+  cards the agent adds fill a tidy grid beside the others. Big pictures reach the agent as a reduced
+  copy, and AVIF or HEIC pictures are converted to PNG when [ffmpeg](https://ffmpeg.org) is installed.
+- **Credits:** ask the agent for the credits and it gathers what went into the file: Poly Haven
+  assets and your library assets it added (with licence and author), the Sandbox's references
+  (creator, licence, page), ComfyUI generations (which workflow) and who built what. It can save them
+  as `<file>.credits.md` beside your saved .blend, and lists anything to check before you publish,
+  like pictures with no known licence.
 - **Looks:** pick how the chat looks in the add-on's preferences. **Halo** (the default) is graphite
   with the answering agent's colour as light: a glowing orb, a lit focus ring and send key. **Signal**
   is an instrument panel: ink-black hairlines, tool steps as a timestamped log, labels in mono
@@ -121,12 +128,13 @@ viewport. Only the bar takes your clicks and typing; everything else stays the v
 |---|---|
 | Look | the scene, its hierarchy, any object's details, the areas you marked |
 | Edit | run Python (with hints that correct common Blender API mistakes, and a warning when a boolean cut didn't take: a window that came out solid), undo; settle objects straight down onto what's below them (props on an uneven bench, books on a rebuilt shelf) |
-| Safety | save points that survive restarts, try-before-you-keep trials with measured before/after, stop. A message you send while the agent is replying waits above the box and goes when the reply ends (Enter twice, or Send now, stops the reply so it goes straight away; × takes it back to edit) |
+| Safety | save points that survive restarts, try-before-you-keep trials with measured before/after, stop. Messages you send while the agent is replying wait above the box, one row each, and go to it together when the reply ends (Enter twice, or Send now, stops the reply so they go straight away; a row's × takes that one back to edit) |
 | Check | rests on / touching / clearance in metres (each separate piece judged by what is right under it, so books on inner shelves or stacked on each other rest), mesh health and real-world size, UV layouts, focused check renders, and the camera's view beside a goal image from the Sandbox, or faded over it; what fails is marked in the viewport (a red box where a part sank in, amber where a mesh has a hole), labelled in plain words |
 | Repair | what the mesh check finds, fixed in one undo step: duplicate vertices, loose bits, zero-area faces, flipped normals; holes, faces inside the shape and generation debris when asked (never fills an object marked as open on purpose) |
 | Lighting | studio, golden hour, noon, overcast and night in one call, with the light coming from where you say ("from the right", "backlit") so the shadows fall where you want; your own lights are kept or hidden, and calling again swaps the preset |
-| Materials | wet, dirt in creases, worn edges, tint to a palette: layered over your textures and removable |
-| Assets | Poly Haven models, textures and skies (CC0, at real size), plus your own asset libraries |
+| Materials | wet, dirt in creases, worn edges, tint to a palette: layered over your textures and removable; textures on meshes without UVs at their real size, so a wall, a shutter and the street line up (box mapping on a copy of the material, or UVs made at the same scale for export); a material from a folder of downloaded maps (Poliigon, ambientCG, Poly Haven: each map found by its file name); a photographic finish for renders in one call (bloom, a slight lens distortion, a colour grade, vignette, film grain) that keeps your own compositor nodes |
+| Assets | Poly Haven models, textures and skies (CC0, at real size), plus your own asset libraries; each one remembers where it came from, for the credits |
+| Credits | one call lists the assets, references, generations and who built what, and saves `<file>.credits.md` beside the .blend, with what to check before publishing |
 | Generate | your own ComfyUI workflows on your own GPU: text to image, text or image to 3D |
 | Sandbox | references, SVG logos, notes and renders on an endless board kept in the file; turn them into planes, 3D logos or palettes, lay a goal image over the camera view in the viewport, or save any of them as a file; full renders in the background |
 | Review | contact sheets in one call: a turntable all round a prop, or a character across its clips, labelled and pinned to the Sandbox |
@@ -136,7 +144,7 @@ viewport. Only the bar takes your clicks and typing; everything else stays the v
 | Deliver | export for Unreal, Unity, Godot or the web, verified by importing the file back; levels of detail (each measured against the original: how far it strays in mm, and from how far away that is under a pixel), collision named the way each engine looks for it, and a warning for material nodes the file won't carry |
 | Feedback | agents keep a journal of bugs, ideas, likes and dislikes about the add-on itself (`feedback_add`), outside the scene so undo or closing a file never loses it; every agent can read it |
 | Rules | standing preferences per file or for every file ("always metres", "name meshes SM_…") |
-| Team | your agents on one goal: tick helpers in the agent menu (Claude, Codex, OpenCode with a local or hosted model) and the agent you picked leads, handing each helper a task (more tasks for a busy helper wait their turn); they work at the same time, each on its own objects, and the lead checks their work and hands out fixes (a fix goes back to the same helper, which picks up where it left off; a helper that fails is reported to the lead straight away, so it can retry while the others keep working). You can talk to the lead while helpers work: your message goes to it straight away (or waits for its reply), the helpers keep going, and it sees where each one is; a helper with no word for 3 minutes shows "quiet for N min" in the chat, so a stall is easy to spot. Each helper's work (its steps, pictures and report) sits in a panel in its own colour, headed "helper for" the lead, so it never reads as the lead's own reply. Also: who did what, notes between agents, reading the chat, and claims ("I'm working on the bucket", even before it exists): another agent's edit of a claimed object is stopped before it runs and told who and why |
+| Team | your agents on one goal: tick helpers in the agent menu (Claude, Codex, OpenCode with a local or hosted model) and the agent you picked leads, handing each helper a task (more tasks for a busy helper wait their turn); they work at the same time, each on its own objects and in the spot the lead gives it, told where the camera is (and told again when it moves) so nothing lands right in front of the lens, and the lead checks their work and hands out fixes (a fix goes back to the same helper, which picks up where it left off; a helper that fails is reported to the lead straight away, so it can retry while the others keep working). You can talk to the lead while helpers work: your message goes to it straight away (or waits for its reply), the helpers keep going, and it sees where each one is; a helper with no word for 3 minutes shows "quiet for N min" in the chat, so a stall is easy to spot. Each helper's work (its steps, pictures and report) sits in a panel in its own colour, headed "helper for" the lead, so it never reads as the lead's own reply. Also: who did what, notes between agents, reading the chat, and claims ("I'm working on the bucket", even before it exists): another agent's edit of a claimed object is stopped before it runs and told who and why |
 
 ## Use it from a terminal agent
 
