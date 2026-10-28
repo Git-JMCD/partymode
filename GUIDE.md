@@ -120,15 +120,15 @@ viewport. Only the bar takes your clicks and typing; everything else stays the v
 | Group | What it covers |
 |---|---|
 | Look | the scene, its hierarchy, any object's details, the areas you marked |
-| Edit | run Python (with hints that correct common Blender API mistakes), undo |
+| Edit | run Python (with hints that correct common Blender API mistakes, and a warning when a boolean cut didn't take: a window that came out solid), undo; settle objects straight down onto what's below them (props on an uneven bench, books on a rebuilt shelf) |
 | Safety | save points that survive restarts, try-before-you-keep trials with measured before/after, stop. A message you send while the agent is replying waits above the box and goes when the reply ends (Enter twice, or Send now, stops the reply so it goes straight away; × takes it back to edit) |
-| Check | rests on / touching / clearance in metres, mesh health and real-world size, UV layouts, focused check renders; what fails is marked in the viewport (a red box where a part sank in, amber where a mesh has a hole), labelled in plain words |
+| Check | rests on / touching / clearance in metres (each separate piece judged by what is right under it, so books on inner shelves or stacked on each other rest), mesh health and real-world size, UV layouts, focused check renders, and the camera's view beside a goal image from the Sandbox, or faded over it; what fails is marked in the viewport (a red box where a part sank in, amber where a mesh has a hole), labelled in plain words |
 | Repair | what the mesh check finds, fixed in one undo step: duplicate vertices, loose bits, zero-area faces, flipped normals; holes, faces inside the shape and generation debris when asked (never fills an object marked as open on purpose) |
 | Lighting | studio, golden hour, noon, overcast and night in one call, with the light coming from where you say ("from the right", "backlit") so the shadows fall where you want; your own lights are kept or hidden, and calling again swaps the preset |
 | Materials | wet, dirt in creases, worn edges, tint to a palette: layered over your textures and removable |
 | Assets | Poly Haven models, textures and skies (CC0, at real size), plus your own asset libraries |
 | Generate | your own ComfyUI workflows on your own GPU: text to image, text or image to 3D |
-| Sandbox | references, SVG logos, notes and renders on an endless board kept in the file; turn them into planes, 3D logos or palettes, or save any of them as a file; full renders in the background |
+| Sandbox | references, SVG logos, notes and renders on an endless board kept in the file; turn them into planes, 3D logos or palettes, lay a goal image over the camera view in the viewport, or save any of them as a file; full renders in the background |
 | Review | contact sheets in one call: a turntable all round a prop, or a character across its clips, labelled and pinned to the Sandbox |
 | Animation | foot sliding measured per step (also on rigs with plain bone names), the travel speed of an in-place clip so it won't skate in the engine, how much of a travelling clip is skating, and the loop seam (pops, and a last frame that repeats the first) |
 | Tidy | find what makes a file heavy or hard to read (unused data, duplicate materials and images, empty collections, unused material slots, unapplied scale, default names, hidden heavy objects) and fix the safe ones in one undo step |
