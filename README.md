@@ -8,7 +8,7 @@
   Blender 5.2 or newer · Free and open source
 </p>
 
-![The chat beside the viewport, working on the default cube](media/hero.png)
+![The chat beside the viewport on a nixie tube clock: Claude warmed the tubes' amber underglow and showed a render](media/hero.png)
 
 Ask for what you want in plain words. Your agents build it in your scene, measure it, show you a
 render, and every change is one Ctrl+Z away.
@@ -82,11 +82,11 @@ side by side, and keep it only if you like it.
 
 <p align="center">
   <img src="media/menu.png" width="49%" alt="The agent menu: pick the agent, see how much of its plan is used, then the model and how hard it thinks">
-  <img src="media/checks.png" width="49%" alt="A failed check marked in the viewport: the cube sunk into the floor">
+  <img src="media/checks.png" width="49%" alt="A failed check marked in the viewport: one nixie tube's brass collar floats 10 mm off the plinth">
 </p>
 <p align="center">
-  <img src="media/sandbox.png" width="49%" alt="The Sandbox: references, notes and renders on an endless board, shared with the agent">
-  <img src="media/bar.png" width="49%" alt="The same chat as a bar floating in the viewport">
+  <img src="media/sandbox.png" width="49%" alt="The Sandbox: the clock's final render, three collar options and the design notes on an endless board, shared with the agent">
+  <img src="media/bar.png" width="49%" alt="The same chat as a bar floating in the viewport, answering how tall the tubes are and whether they sit in their collars">
 </p>
 
 ## Make things on your own GPU
