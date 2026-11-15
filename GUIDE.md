@@ -93,9 +93,11 @@ in place. Your chats, Sandbox and settings stay. It never installs while an agen
 - **Research without leaving Blender:** switch on **Research the next message** in the agent menu
   and the agent may search the web and read pages for that message, while your scene stays
   read-only. What it finds lands in the Sandbox: notes with links, and openly licensed pictures
-  (searched through Openverse, with each one's licence, creator and page on its card; **Source**
-  opens the page). Before each search, page or picture, the chat asks: **Allow**, **Allow for this
-  chat** or **Deny**. You can turn the asking off in the preferences. The **Research** preference
+  (searched through Openverse, or Wikimedia Commons when Openverse is down, with each one's licence,
+  creator and page on its card; **Source** opens the page). Before each search, page or picture, the
+  chat asks: **Allow**, **Allow for this chat** or **Deny**. You can turn the asking off in the
+  preferences, or, before you leave a run alone overnight, **Allow for 2 / 8 / 12 h** in the Web tab, so
+  no agent waits on a question nobody will answer. The **Research** preference
   picks when the web is allowed:
   - **Off:** never.
   - **Per message** (the default): the switch, for one message.
@@ -112,9 +114,18 @@ in place. Your chats, Sandbox and settings stay. It never installs while an agen
 - **Render cards:** renders arrive as cards. A trial has **Keep**, **Before** and **Diff**; any render
   has **Lit render** / **Solid view**, **Undo last edit** and **Open**.
 - **Quick actions** above the message box: Check scene, Lit render, Checkpoint (a save point), Undo.
-- Tool steps fold into one line you can open. The header shows how full the agent's memory is, and
-  past 60% offers to **continue in a new chat** with a handoff summary.
-- Chats are saved. Reopen one from the sessions list and carry on, even with a different agent.
+- Tool steps fold into one line you can open. The header shows how full the agent's memory is. Past 60%
+  the chat is full, and your next message starts a new chat by itself: the agent writes a summary of the
+  old one, and the message goes there. Nothing waits for you. To choose each time instead, switch off
+  **Continue long chats by themselves** in the preferences' Chat tab, where you can also move the 60%.
+- Claude answers in the chat at **Medium** reasoning unless you pick a level in the agent menu. Its
+  thinking stays in the chat's memory, so a higher level fills a chat sooner.
+- Chats are saved. Reopen one from the sessions list and carry on, even with a different agent. After its
+  first answer (and again after its fifth) a chat is named by what it did, like "Bamboo Canes v3,
+  Exported", and each row shows its .blend file, when, which agent and what it did last. A name you give
+  a chat stays.
+- **Search** finds chats by name, file or anything said in them. **Select** ticks several at once, or picks
+  them for you (older than a week, made in other files, all), and **Delete** clears them in one go.
 - The same chats are in your browser at `http://127.0.0.1:9900/chat`.
 
 **Viewport bar.** The bar button beside **PartyMode** floats the same chat at the bottom of your
