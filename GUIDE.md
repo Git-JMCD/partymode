@@ -44,8 +44,11 @@ fix. Below it, five tabs:
 
 - **Chat:** who answers, and a row per agent with its model, reasoning and team role.
 - **Agents:** which agents the chat offers. Claude, Codex and OpenCode are built in. Grok Build,
-  GitHub Copilot and Gemini CLI connect through the Agent Client Protocol (ACP): install one and
-  switch it on. **Add an ACP agent** takes any other ACP agent by the command that starts it (for
+  GitHub Copilot and Gemini connect through the Agent Client Protocol (ACP): install one and
+  switch it on. Gemini runs through [Antigravity](https://antigravity.google)'s `agy` command
+  with your Google sign-in (no API key), or through Gemini CLI if that's what you have. Antigravity
+  takes fewer tools than PartyMode has, so Gemini gets the core ones (looking, editing, checking,
+  undo, save points, the team and notes, assets and export) with shorter descriptions. **Add an ACP agent** takes any other ACP agent by the command that starts it (for
   example `qwen --acp`). **Test** starts an ACP agent, connects it to Blender and lists its models
   without sending a message; a failed test is noted in PartyMode's feedback. Only agents switched on
   show in the agent menu and the team. ACP agents work through Blender's tools like the others: their
@@ -139,7 +142,7 @@ viewport. Only the bar takes your clicks and typing; everything else stays the v
 |---|---|
 | Look | the scene, its hierarchy, any object's details, the areas you marked |
 | Edit | run Python (with hints that correct common Blender API mistakes, and warnings when a boolean cut didn't take, a window that came out solid, or a closed mesh came out inside-out), undo; settle objects straight down onto what's below them (props on an uneven bench, books on a rebuilt shelf, a tent grouped under an empty) |
-| Safety | save points that survive restarts, try-before-you-keep trials with measured before/after, stop. Messages you send while the agent is replying wait above the box, one row each, and go to it together when the reply ends (Enter twice, or Send now, stops the reply so they go straight away; a row's × takes that one back to edit) |
+| Safety | save points that survive restarts (each is a full copy of the file, so a new one clears old ones: a file keeps its newest 8, and none stay longer than 14 days except each file's newest; the numbers and the folder they are stored in, for a drive with more room, are in Preferences > Setup > Save points, and the agent can list their sizes and delete them when you ask), try-before-you-keep trials with measured before/after, stop. Messages you send while the agent is replying wait above the box, one row each, and go to it together when the reply ends (Enter twice, or Send now, stops the reply so they go straight away; a row's × takes that one back to edit) |
 | Check | a whole-scene check before a build is called done (every part that touches nothing, with its gap, and every inside-out mesh); rests on / touching / clearance in metres (each separate piece judged by what is right under it, so books on inner shelves or stacked on each other rest), mesh health and real-world size, UV layouts, focused check renders, and the camera's view beside a goal image from the Sandbox, or faded over it; what fails is marked in the viewport (a red box where a part sank in, amber where a mesh has a hole), labelled in plain words |
 | Repair | what the mesh check finds, fixed in one undo step: duplicate vertices, loose bits, zero-area faces, flipped normals; holes, faces inside the shape and generation debris when asked (never fills an object marked as open on purpose) |
 | Lighting | studio, golden hour, noon, overcast and night in one call, with the light coming from where you say ("from the right", "backlit") so the shadows fall where you want; your own lights are kept or hidden, and calling again swaps the preset |

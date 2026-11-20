@@ -119,7 +119,7 @@ The chat needs one agent, signed in on your computer:
 [Claude Code](https://claude.com/claude-code) (your Claude plan),
 [Codex](https://github.com/openai/codex) (your ChatGPT plan), or
 [OpenCode](https://opencode.ai) (hosted models, Meta's among them, or local ones that keep everything
-on your machine). Or switch on Grok Build, GitHub Copilot, Gemini CLI or any other agent that speaks
+on your machine). Or switch on Grok Build, GitHub Copilot, Gemini (through Antigravity) or any other agent that speaks
 the Agent Client Protocol, in the add-on's Agents settings.
 
 Updates arrive in the add-on itself: one click in its preferences.
